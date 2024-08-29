@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import UserProfile from "../GlobalState/UseProfile";
+import Content from "../components/Content";
+import NavBar from "../components/NavBar";
 
-const messageUi = () => {
+const MessageUI = () => {
+  const { profile } = UserProfile();
+
   return (
-    <div>messageUi</div>
-  )
-}
+    <div className="flex flex-col gap-3">
+        <NavBar/>
+      <div className="flex flex-col">
+        {profile.map((pf, index) => (
+          <Content key={index} pf={pf} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default messageUi
+export default MessageUI;
