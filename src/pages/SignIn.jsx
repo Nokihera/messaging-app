@@ -1,7 +1,9 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { auth } from "../config/firebase";
 
 const SignIn = () => {
   const nav = useNavigate();
@@ -28,15 +30,25 @@ const SignIn = () => {
   const onSubmit = async (values, { setSubmitting }) => {
     setSubmitError("");
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log("Form Data", values);
+
+      // Sign in the user with email and password
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
+
+      // If the sign-in is successful, navigate to the home page
+      if (userCredential) {
+        nav("/home");
+      }
     } catch (error) {
-      setSubmitError("An error occurred. Please try again.");
+      setSubmitError(error.message);
     } finally {
       setSubmitting(false);
     }
   };
-
   return (
     <section className="text-gray-400 bg-gray-900 body-font relative h-screen flex items-center">
       <Formik

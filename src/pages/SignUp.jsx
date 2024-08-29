@@ -2,6 +2,8 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const nav = useNavigate();
@@ -32,10 +34,19 @@ const SignUp = () => {
   const onSubmit = async (values, { setSubmitting }) => {
     setSubmitError("");
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      console.log("Form Data", values);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        values.email,
+        values.password
+      );
+      if (userCredential && values.name) {
+        await updateProfile(auth.currentUser, {
+          displayName: values.name,
+        });
+        nav("/");
+      }
     } catch (error) {
-      setSubmitError("An error occurred. Please try again.");
+      setSubmitError(error.message);
     } finally {
       setSubmitting(false);
     }
@@ -127,10 +138,10 @@ const SignUp = () => {
                   </button>
                 </div>
                 <button
-                  onClick={()=>nav("/")}
+                  onClick={() => nav("/")}
                   className=" p-2 w-full text-center"
                 >
-                  I don't have any accout.Sign Up
+                  I don't have any accout.Sign In
                 </button>
                 {submitError && (
                   <div className="p-2 w-full text-red-500 text-center">

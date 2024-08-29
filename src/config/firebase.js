@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBlZKS7mft7wrvdIqAgKIJ4rxd5F6ZrYAY",
   authDomain: "messaging-app-d4665.firebaseapp.com",
@@ -11,3 +13,5 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
