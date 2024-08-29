@@ -41,7 +41,7 @@ const SignIn = () => {
 
       // If the sign-in is successful, navigate to the home page
       if (userCredential) {
-        nav("/home");
+        nav("/message");
       }
     } catch (error) {
       setSubmitError(error.message);
