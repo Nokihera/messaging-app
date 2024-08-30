@@ -19,7 +19,7 @@ const NavBar = () => {
   return (
     <>
       <nav className="px-7 py-3 shadow-lg">
-        <div className="flex justify-between items-center">
+        <div className=" flex justify-between items-center">
           <img src={logo} alt="Logo" className="md:h-14 h-11" />
           <button
             className="md:hidden rounded-lg px-3 bg-gray-600 py-1 "
@@ -46,7 +46,7 @@ const NavBar = () => {
         </div>
       </nav>
       <div
-        className={`flex-col items-center gap-2 bg-slate-800 px-5 ${
+        className={`flex-col items-center gap-2 bg-slate-800 ${
           menuClick ? "flex" : "hidden"
         }`}
       >

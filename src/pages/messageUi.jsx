@@ -5,6 +5,8 @@ import NavBar from "../components/NavBar";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../config/firebase";
 import { collection, getDoc, getDocs } from "firebase/firestore";
+import Heading from "../components/Heading";
+import PublicChat from "../components/PublicChat";
 
 const MessageUI = () => {
   const { profile } = UserProfile();
@@ -25,25 +27,27 @@ const MessageUI = () => {
   //   fetchUsers();
   // }, []);
 
-  console.log(auth)
-  useEffect(()=>{
-    if(auth){
-      setCurrentUser(auth.currentUser)
+  console.log(auth);
+  useEffect(() => {
+    if (auth) {
+      setCurrentUser(auth.currentUser);
     }
-  },[auth])
-
+  }, [auth]);
+  const [chgPage, setChgPage] = useState(true);
+  const handlerChgPage = ()=> {
+    setChgPage(!chgPage);
+  }
 
   return (
     <div className="flex flex-col">
-      
       <NavBar />
       {currentUser && <div>This is {currentUser.displayName}</div>}
-      <h1 className="text-xl text-gray-800 font-bold px-7 mt-4">Recent</h1>
-      <div className="flex flex-col">
+      <Heading chgPage = {chgPage} handler={handlerChgPage}/>
+      {chgPage? (<div className="flex flex-col">
         {profile.map((pf, index) => (
           <Content key={index} pf={pf} />
         ))}
-      </div>
+      </div>): (<PublicChat/>)}
     </div>
   );
 };
