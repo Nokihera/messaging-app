@@ -9,6 +9,7 @@ const useUserProfile = create((set) => ({
             lastSeen: "2024-08-30T14:23:00Z",
             isOnline: true,
             bio: "Coffee lover. Tech enthusiast.",
+            message: "Hey it's me!",
         },
         {
             username: "jane_smith",
@@ -17,6 +18,7 @@ const useUserProfile = create((set) => ({
             lastSeen: "2024-08-30T13:45:00Z",
             isOnline: false,
             bio: "Traveler. Foodie. Dreamer.",
+            message: "I'm on my way!",
         },
         {
             username: "alice_wonder",
@@ -25,6 +27,7 @@ const useUserProfile = create((set) => ({
             lastSeen: "2024-08-30T15:10:00Z",
             isOnline: false,
             bio: "Nature enthusiast. Avid reader.",
+            message: "Hey there! I am using ChatApp.",
         },
         {
             username: "bob_marley",
@@ -33,6 +36,7 @@ const useUserProfile = create((set) => ({
             lastSeen: "2024-08-30T16:30:00Z",
             isOnline: true,
             bio: "Music is life. Peace and love.",
+            message: "Hello, how are you?",
         },
     ],
 }));
