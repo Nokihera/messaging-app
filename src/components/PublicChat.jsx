@@ -37,7 +37,8 @@ const PublicChat = () => {
           
         ))}
       </div>
-      <div className="fixed bottom-3 mx-auto w-full flex gap-4 justify-center px-7">
+      <SentBox/>
+      {/* <div className="fixed bottom-3 mx-auto w-full flex gap-4 justify-center px-7">
         <input
           type="text"
           className="bg-gray-300 rounded-full py-3 px-7 max-w-[450px] focus:border-blue-500 border-2 outline-none transition-all duration-300" placeholder="Message"
@@ -48,7 +49,7 @@ const PublicChat = () => {
         <button className="bg-blue-500 text-white md:rounded-full md:px-5 rounded-lg px-3">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
-      </div>
+      </div> */}
     </>
   );
 };
