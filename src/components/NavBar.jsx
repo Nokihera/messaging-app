@@ -12,7 +12,7 @@ const NavBar = () => {
   const navBtnList = [
     { name: "Profile", link: "/profile" },
     { name: "Logout", link: "/logout" },
-    { name: "Settings", link: "/settings" },
+    { name: "Setting", link: "/setting" },
     { name: "Help", link: "/help" },
   ];
 
