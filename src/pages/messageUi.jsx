@@ -35,8 +35,10 @@ const MessageUI = () => {
 
   return (
     <div className="flex flex-col">
+      
       <NavBar />
       {currentUser && <div>This is {currentUser.displayName}</div>}
+      <h1 className="text-xl text-gray-800 font-bold px-7 mt-4">Recent</h1>
       <div className="flex flex-col">
         {profile.map((pf, index) => (
           <Content key={index} pf={pf} />

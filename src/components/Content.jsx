@@ -3,7 +3,7 @@ import React from "react";
 const Content = ({ pf }) => {
   return (
     <div
-      className="flex gap-3 items-center border-b-2 border-gray-500 py-4 px-6"
+      className="flex gap-3 items-center border-b-2 border-gray-500 py-4 px-7"
     >
       <img
         src={pf.profilePictureUrl}
