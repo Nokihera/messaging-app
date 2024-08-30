@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Heading = ({ chgPage, handler }) => {
   return (
     <div className="flex justify-between items-center px-7 mt-4">
-      <h1 className="text-xl text-gray-800 font-bold">Recent</h1>
+      <h1 className="text-xl text-gray-800 font-bold">{chgPage? "Private Chat":"Public Chat"}</h1>
       <button
         onClick={() => {
           handler();
