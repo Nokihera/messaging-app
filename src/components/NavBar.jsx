@@ -43,10 +43,10 @@ const NavBar = () => {
           menuClick ? "flex" : "hidden"
         }`}
       >
-        <button className="w-full text-white py-2 hover:bg-blue-500">Profile</button>
-        <button className="w-full text-white py-2 hover:bg-blue-500">Logout</button>
-        <button className="w-full text-white py-2 hover:bg-blue-500">Setting</button>
-        <button className="w-full text-white py-2 hover:bg-blue-500">Help</button>
+        <button className="w-full text-white py-2 hover:bg-blue-500 transition-all duration-300">Profile</button>
+        <button className="w-full text-white py-2 hover:bg-blue-500 transition-all duration-300">Logout</button>
+        <button className="w-full text-white py-2 hover:bg-blue-500 transition-all duration-300">Setting</button>
+        <button className="w-full text-white py-2 hover:bg-blue-500 transition-all duration-300">Help</button>
       </div>
     </>
   );
