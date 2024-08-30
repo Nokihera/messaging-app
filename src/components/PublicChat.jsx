@@ -5,10 +5,10 @@ const PublicChat = () => {
   const { profile } = useUserProfile();
   return (
     <>
-      <div className="flex flex-col gap-5 flex-grow-3">
+      <div className="flex flex-col gap-5 overflow-scroll mt-5">
         {profile.map((pf) => (
           <>
-            <div className="flex gap-3 items-center max-w-md bg-gray-300 rounded-e-full py-3 px-7 ">
+            <div className="flex gap-3 items-center md:max-w-md bg-gray-300 rounded-e-full py-3 px-7 max-w-80">
               <img
                 src={pf.profilePictureUrl}
                 alt=""
@@ -22,15 +22,15 @@ const PublicChat = () => {
           </>
         ))}
       </div>
-      <div className="fixed bottom-3 mx-auto w-full flex gap-4 justify-center">
+      <div className="fixed bottom-3 mx-auto w-full flex gap-4 justify-center px-7">
         <input
           type="text"
-          className="bg-gray-300 rounded-full py-3 px-7 w-[450px] focus:border-blue-500 border-2 outline-none transition-all duration-300" placeholder="Message"
+          className="bg-gray-300 rounded-full py-3 px-7 max-w-[450px] focus:border-blue-500 border-2 outline-none transition-all duration-300" placeholder="Message"
         />
-        <button className="bg-blue-500 text-white rounded-full px-5">
+        <button className="bg-blue-500 text-white md:rounded-full md:px-5 rounded-lg px-3">
           <i class="fa-solid fa-microphone"></i>
         </button>
-        <button className="bg-blue-500 text-white rounded-full px-5">
+        <button className="bg-blue-500 text-white md:rounded-full md:px-5 rounded-lg px-3">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
