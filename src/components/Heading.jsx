@@ -12,8 +12,8 @@ const Heading = ({ chgPage, handler }) => {
         className=" bg-blue-500 text-white rounded-full px-3 py-2" 
       >
         {chgPage? 
-        (<i class="fa-solid fa-user"></i>):
-        (<i class="fa-solid fa-user-group"></i>)
+        (<i className="fa-solid fa-user"></i>):
+        (<i className="fa-solid fa-user-group"></i>)
         }
       </button>
     </div>

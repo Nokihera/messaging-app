@@ -16,10 +16,10 @@ const Content = ({ pf }) => {
       </div>
       <div className="flex items-center gap-5">
         <button>
-          <i class="fa-solid fa-phone"></i>
+          <i className="fa-solid fa-phone" />
         </button>
         <button>
-          <i class="fa-solid fa-video"></i>
+          <i className="fa-solid fa-video" />
         </button>
       </div>
     </div>
