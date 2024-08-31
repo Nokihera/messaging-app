@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EditProfile = () => {
   const [name, setName] = useState("user");
@@ -108,7 +109,7 @@ const EditProfile = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-center mt-[300px]"><button className="bg-blue-500 text-white rounded-lg px-3 py-2">Submit</button></div>
+      <div className="flex w-full justify-center mt-[300px] gap-5"><Link to="/profile" className="bg-blue-500 text-white rounded-lg px-3 py-2">Back</Link><button className="bg-blue-500 text-white rounded-lg px-3 py-2">Save</button></div>
     </>
   );
 };
