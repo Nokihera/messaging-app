@@ -27,7 +27,7 @@ const MessageUI = () => {
   //   fetchUsers();
   // }, []);
 
-  console.log(auth);
+  // console.log(auth);
   useEffect(() => {
     if (auth) {
       setCurrentUser(auth.currentUser);
