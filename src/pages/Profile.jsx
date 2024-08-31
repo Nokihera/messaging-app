@@ -2,7 +2,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 // import { auth } from "../store/firebase";
 import userIcon from "../assets/user-svgrepo-com.svg"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../config/firebase";
 
 const Profile = () => {
@@ -40,9 +40,9 @@ const Profile = () => {
               <button onClick={()=>nav("/chat-box")} className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Back
               </button>
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+              <Link to={"/edit-profile"} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
                 Edit
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Profile from './pages/Profile'
 import Setting from './pages/Setting'
 import Help from './pages/Help'
 import PublicChat from './components/PublicChat'
+import EditProfile from './pages/EditProfile'
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
             <Route path='/profile' element={<Profile/>}/>
             <Route path='/setting' element={<Setting/>}/>
             <Route path='/help' element={<Help/>}/>
-            {/* <Route path='/public-chat' element={<PublicChat/>}/> */}
+            <Route path='/edit-profile' element={<EditProfile/>}/>
         </Routes>
     </div>
   )
