@@ -27,7 +27,7 @@ const PublicChat = () => {
 
   return (
     <>
-      <div className="w-full flex flex-col gap-5 overflow-y-auto mt-5 bg-green-300 p-4">
+      <div className="w-full flex flex-col gap-5 overflow-y-auto mt-5 bg-slate-800 p-4">
         {messages.map((message, index) => (
           <div
             key={index}

@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="px-7 py-3 shadow-lg">
+      <nav className="px-7 py-3 shadow-lg z-50">
         <div className=" flex justify-between items-center">
           <img src={logo} alt="Logo" className="md:h-14 h-11" />
           <button

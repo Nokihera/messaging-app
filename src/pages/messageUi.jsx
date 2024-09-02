@@ -41,7 +41,7 @@ const MessageUI = () => {
   return (
     <div className="flex flex-col">
       <NavBar />
-      {currentUser && <div>This is {currentUser.displayName}</div>}
+      {/* {currentUser && <div>This is {currentUser.displayName}</div>} */}
       <Heading chgPage = {chgPage} handler={handlerChgPage}/>
       {chgPage? (<div className="flex flex-col">
         {profile.map((pf, index) => (

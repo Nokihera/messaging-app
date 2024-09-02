@@ -51,7 +51,7 @@ const SentBox = () => {
     <>
       <form
         onSubmit={messageSentHandle}
-        className=" bg-gray-200 py-4 fixed bottom-0 mx-auto w-full flex gap-4 justify-center px-7"
+        className=" bg-gray-300 py-4 fixed bottom-0 mx-auto w-full flex gap-4 justify-center px-7 z-40"
       >
         <input
           name="message"

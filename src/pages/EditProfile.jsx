@@ -34,7 +34,7 @@ const EditProfile = () => {
       updateProfile(currentUser, {
         displayName: name,
       }).then(() => {
-        // toggleEdit(setClick);
+        alert("Your Display Name is updated!")
       }).catch((error) => {
         console.log(error);
       });
